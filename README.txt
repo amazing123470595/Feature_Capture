@@ -11,9 +11,11 @@ Place the amino acid sequence data in .txt format into the data folder.
 
 3.Convert data types
 Modify the filename in Divide_sample.py and run the program.
+(Input: X.txt;  Output: pos_X.fasta, neg_X.fasta)
 
 4.Extract ProtT5 features
 Modify the filename in Feature/ProtT5.py and run the program.
+(Input: pos_X.fasta, neg_X.fasta;  Output: pos_X_CD_ProtT5_features.csv, pos_X_CD_ProtT5_features.csv)
 
 5.Extract the feature of a single amino acid
 To extract the feature of a single amino acid, Modify the filename in Feature/ProtT5_T.py, replace the number 20 in line 24 of ProtT5_T in
@@ -21,8 +23,9 @@ To extract the feature of a single amino acid, Modify the filename in Feature/Pr
 features = features[20]
 
 with the amino acid’s index (zero-based).
+(Input: pos_X_CD_ProtT5_features.csv, pos_X_CD_ProtT5_features.csv;  Output: pos_X_CD_ProtT5_features_T.csv, pos_X_CD_ProtT5_features_T.csv)
 
 6.Extract TPEM-PPS_CCP features
 Modify the filename in ZccFccp.py and run the program.
-
+(Input: pos_X1.fasta, neg_X1.fasta, pos_X2.fasta, neg_X2.fasta;  Output: X1_TPEMPPS_CCP_features.csv, X2_TPEMPPS_CCP_features.csv)
 
